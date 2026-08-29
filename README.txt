@@ -1,1 +1,1 @@
-V3: replace index.html and upload assets/logo-simurnis-3d.png. Keep api/search.js, lib/students.js and DELIMA_ACCESS_CODE unchanged.
+V3.1 — Replace index.html and upload assets/logo-simurnis-3d.png. API/search.js, lib/students.js and DELIMA_ACCESS_CODE remain unchanged. V3.1 adds show/hide password and validates the access code immediately before unlocking search.
