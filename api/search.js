@@ -23,10 +23,15 @@ module.exports = async (req, res) => {
   }
 
   const code = String(body.code || "");
+  const action = String(body.action || "");
   const q = String(body.q || "").trim().toLowerCase();
 
   if (!code || code !== configured) {
     return res.status(401).json({ error: "Access code tidak sah." });
+  }
+
+  if (action === "auth") {
+    return res.status(200).json({ ok: true, message: "Akses berjaya." });
   }
 
   if (q.length < 2) {
