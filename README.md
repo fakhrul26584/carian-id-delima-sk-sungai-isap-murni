@@ -26,3 +26,14 @@ Selepas commit/push ke `main`, Vercel akan auto-deploy.
 
 ## Important
 Jangan letakkan fail Excel asal dalam folder public website. Simpan Excel sebagai sumber master secara berasingan.
+
+
+### Logo update
+The current `assets/logo-simurnis-3d.png` is the modern 3D school crest. Replace this file when a newer approved logo is available.
+
+
+## Database terkini
+- Sumber: ID DELIMA MURID.xlsx
+- Tahun: 2026
+- Rekod unik: 297
+- Fail database: `data/students.json`
