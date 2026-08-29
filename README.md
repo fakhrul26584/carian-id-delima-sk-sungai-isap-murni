@@ -4,7 +4,7 @@ Versi 2: carian melalui Vercel API dengan access code. Data murid tidak lagi ber
 
 ## Deploy
 1. Upload semua fail/folder ini ke repository GitHub yang sama.
-2. Pastikan `api/students.js` dan `api/search.js` berada dalam folder `api`.
+2. Pastikan `api/search.js` berada dalam folder `api` dan `lib/students.js` berada dalam folder `lib`.
 3. Di Vercel: Project → Settings → Environment Variables.
 4. Tambah:
    - Name: `DELIMA_ACCESS_CODE`
@@ -13,3 +13,6 @@ Versi 2: carian melalui Vercel API dengan access code. Data murid tidak lagi ber
 5. Redeploy.
 
 Jangan masukkan access code ke dalam `index.html` atau GitHub.
+
+
+Nota: Jangan tambah `vercel.json` dengan `functions.runtime` untuk projek ini. Vercel akan auto-detect Node.js API Function.

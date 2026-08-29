@@ -1,4 +1,4 @@
-const students = require("./students");
+const students = require("../lib/students");
 
 function cors(res) {
   res.setHeader("Cache-Control", "no-store");
