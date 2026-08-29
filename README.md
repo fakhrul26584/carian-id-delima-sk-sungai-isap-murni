@@ -1,18 +1,28 @@
-# Sistem Carian ID DELIMa — SK Sungai Isap Murni
+# Sistem Carian ID DELIMa V4
 
-Versi 2: carian melalui Vercel API dengan access code. Data murid tidak lagi berada dalam folder public `/data`.
+## Architecture
+- `index.html` — interface
+- `api/search.js` — server-side access verification + search
+- `data/students.json` — **database murid sahaja**
+- `assets/logo-simurnis-3d.png` — logo
+- `DELIMA_ACCESS_CODE` — Vercel Environment Variable
 
-## Deploy
-1. Upload semua fail/folder ini ke repository GitHub yang sama.
-2. Pastikan `api/search.js` berada dalam folder `api` dan `lib/students.js` berada dalam folder `lib`.
-3. Di Vercel: Project → Settings → Environment Variables.
-4. Tambah:
-   - Name: `DELIMA_ACCESS_CODE`
-   - Value: access code rahsia sekolah
-   - Environment: Production (dan Preview jika diperlukan)
-5. Redeploy.
+## Database update workflow
+Bila Excel DELIMa baharu diterima, hanya gantikan:
 
-Jangan masukkan access code ke dalam `index.html` atau GitHub.
+`data/students.json`
 
+Jangan ubah `index.html` atau `api/search.js` jika struktur data kekal:
 
-Nota: Jangan tambah `vercel.json` dengan `functions.runtime` untuk projek ini. Vercel akan auto-detect Node.js API Function.
+```json
+{
+  "name": "NAMA MURID",
+  "id": "ID DELIMA",
+  "class": "KELAS"
+}
+```
+
+Selepas commit/push ke `main`, Vercel akan auto-deploy.
+
+## Important
+Jangan letakkan fail Excel asal dalam folder public website. Simpan Excel sebagai sumber master secara berasingan.

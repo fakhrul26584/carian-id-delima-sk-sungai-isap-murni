@@ -1,4 +1,4 @@
-const students = require("../lib/students");
+const students = require("../data/students.json");
 
 function cors(res) {
   res.setHeader("Cache-Control", "no-store");
@@ -31,7 +31,11 @@ module.exports = async (req, res) => {
   }
 
   if (action === "auth") {
-    return res.status(200).json({ ok: true, message: "Akses berjaya." });
+    return res.status(200).json({
+      ok: true,
+      message: "Akses berjaya.",
+      totalRecords: students.length
+    });
   }
 
   if (q.length < 2) {
@@ -39,8 +43,12 @@ module.exports = async (req, res) => {
   }
 
   const results = students
-    .filter(s => s.name.toLowerCase().includes(q))
+    .filter(s => String(s.name || "").toLowerCase().includes(q))
     .slice(0, 30);
 
-  return res.status(200).json({ results, total: results.length });
+  return res.status(200).json({
+    results,
+    total: results.length,
+    totalRecords: students.length
+  });
 };
