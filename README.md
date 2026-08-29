@@ -37,3 +37,11 @@ The current `assets/logo-simurnis-3d.png` is the modern 3D school crest. Replace
 - Tahun: 2026
 - Rekod unik: 297
 - Fail database: `data/students.json`
+
+
+## Logo asal sekolah
+Untuk kembali kepada logo asal, gantikan `assets/logo-simurnis-3d.png` dengan fail logo asal sekolah **menggunakan nama fail yang sama**. `index.html` versi 4.1 sudah membuang perspektif/3D styling; logo akan dipaparkan sebagai artwork asal dengan shadow yang sangat minimum.
+
+
+## Logo FIX v4.2
+`assets/logo-simurnis.png` kini menggunakan logo asal sekolah yang dibekalkan, tanpa 3D. `index.html` menggunakan path ini secara terus. Background putih luar telah dibuat transparent; bahagian putih yang merupakan sebahagian daripada logo dikekalkan.
