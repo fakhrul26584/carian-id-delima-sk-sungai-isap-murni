@@ -1,0 +1,1 @@
+V3: replace index.html and upload assets/logo-simurnis-3d.png. Keep api/search.js, lib/students.js and DELIMA_ACCESS_CODE unchanged.
